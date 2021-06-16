@@ -1,1 +1,1 @@
-web: ./target/release/csml_server
+web: ENGINE_SERVER_PORT=$PORT ./target/release/csml_server

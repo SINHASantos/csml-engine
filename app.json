@@ -9,6 +9,15 @@
         "ENGINE_DB_TYPE": {
             "value": "dynamodb",
             "required": true
+        },
+        "MONGODB_HOST": "",
+        "MONGODB_PORT": "",
+        "MONGODB_DATABASE": "",
+        "MONGODB_USERNAME": "",
+        "MONGODB_PASSWORD": "",
+
+        "ENCRYPTION_SECRET": {
+            "generator": "secret"
         }
     },
     "buildpacks": [

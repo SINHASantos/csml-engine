@@ -22,6 +22,10 @@
   <a href="#additional-information">Additional Information</a>
 </p>
 
+## Deploy
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 <h2 align="center">
   <img src="./images/csml-demo.png" alt="CSML-demo" width="700">
 </h2>
