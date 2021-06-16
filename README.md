@@ -26,10 +26,9 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-<a href="https://heroku.com/deploy">
+<a href="https://heroku.com/deploy?template=https://github.com/CSML-by-Clevy/csml-engine/tree/feat/deploy-to-heroku">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
-
 
 <h2 align="center">
   <img src="./images/csml-demo.png" alt="CSML-demo" width="700">
