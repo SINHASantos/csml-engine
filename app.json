@@ -7,11 +7,11 @@
     "website": "https://www.csml.dev/",
     "env": {
         "ENGINE_DB_TYPE": {
-            "value": "dynamodb",
+            "value": "mongodb",
             "required": true
         },
+        "MONGODB_DATABASE": "csml",
         "MONGODB_URI": "",
-        "MONGODB_DATABASE": "",
 
         "ENCRYPTION_SECRET": {
             "generator": "secret"
