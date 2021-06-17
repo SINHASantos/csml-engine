@@ -10,11 +10,8 @@
             "value": "dynamodb",
             "required": true
         },
-        "MONGODB_HOST": "",
-        "MONGODB_PORT": "",
+        "MONGODB_URI": "",
         "MONGODB_DATABASE": "",
-        "MONGODB_USERNAME": "",
-        "MONGODB_PASSWORD": "",
 
         "ENCRYPTION_SECRET": {
             "generator": "secret"

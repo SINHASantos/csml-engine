@@ -31,35 +31,43 @@ fn init_mongo_credentials() -> Option<mongodb::options::Credential> {
 }
 
 pub fn init() -> Result<Database, EngineError> {
-    let hostname = match std::env::var("MONGODB_HOST") {
-        Ok(var) => var,
-        _ => panic!("Missing MONGODB_HOST in env"),
-    };
+    // let hostname = match std::env::var("MONGODB_HOST") {
+    //     Ok(var) => var,
+    //     _ => panic!("Missing MONGODB_HOST in env"),
+    // };
 
     let dbname = match std::env::var("MONGODB_DATABASE") {
         Ok(var) => var,
         _ => panic!("Missing MONGODB_DATABASE in env"),
     };
 
-    let port: Option<u16> = match std::env::var("MONGODB_PORT") {
-        Ok(var) => match var.parse::<u16>() {
-            Ok(port) => Some(port),
-            Err(err) => return Err(EngineError::Manager(err.to_string())),
-        },
-        _ => None,
+    // let port: Option<u16> = match std::env::var("MONGODB_PORT") {
+    //     Ok(var) => match var.parse::<u16>() {
+    //         Ok(port) => Some(port),
+    //         Err(err) => return Err(EngineError::Manager(err.to_string())),
+    //     },
+    //     _ => None,
+    // };
+
+    // let credentials = init_mongo_credentials();
+
+    // let options = mongodb::options::ClientOptions::builder()
+    //     .hosts(vec![mongodb::options::StreamAddress {
+    //         hostname: hostname.into(),
+    //         port,
+    //     }])
+    //     .credential(credentials)
+    //     .build();
+
+    // let client = mongodb::sync::Client::with_options(options)?;
+
+    let uri = match std::env::var("MONGODB_URI") {
+        Ok(var) => var,
+        _ => panic!("Missing MONGODB_DATABASE in env"),
     };
 
-    let credentials = init_mongo_credentials();
+    let client = mongodb::sync::Client::with_uri_str(&uri)?;
 
-    let options = mongodb::options::ClientOptions::builder()
-        .hosts(vec![mongodb::options::StreamAddress {
-            hostname: hostname.into(),
-            port,
-        }])
-        .credential(credentials)
-        .build();
-
-    let client = mongodb::sync::Client::with_options(options)?;
     let db = Database::Mongo(MongoDbClient::new(client.database(&dbname)));
     Ok(db)
 }
