@@ -14,12 +14,12 @@
         "MONGODB_URI": "",
 
         "ENCRYPTION_SECRET": {
-            "generator": "secret"
+            "required": false
         }
     },
     "buildpacks": [
         {
-          "url": "https://github.com/emk/heroku-buildpack-rust.git"
+          "url": "https://github.com/CSML-by-Clevy/heroku-buildpack-csml"
         }
     ]
 }

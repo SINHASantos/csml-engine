@@ -1,1 +1,1 @@
-web: ./target/release/csml_server
+web: ./csml-server

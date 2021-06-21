@@ -1,1 +1,0 @@
-RUST_CARGO_BUILD_FLAGS="--manifest-path=csml_server/Cargo.toml --features csml_engine/mongo --release"
