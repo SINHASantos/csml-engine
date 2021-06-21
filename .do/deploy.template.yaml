@@ -1,0 +1,25 @@
+spec:
+ name: csml-engine
+ services:
+ - name: web
+   git:
+     branch: feat/deploy-to-digital-ocean
+     repo_clone_url: https://github.com/digitalocean/sample-golang.git
+   envs:
+    - key:
+   run_command: cargo run --manifest-path=csml_server/Cargo.toml --features csml_engine/mongo --release
+
+
+
+# {
+#         "ENGINE_DB_TYPE": {
+#             "value": "mongodb",
+#             "required": true
+#         },
+#         "MONGODB_DATABASE": "csml",
+#         "MONGODB_URI": "",
+
+#         "ENCRYPTION_SECRET": {
+#             "generator": "secret"
+#         }
+#     }
