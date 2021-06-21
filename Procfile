@@ -1,2 +1,1 @@
-web: ls -la
-web: ./csml-server
+web: ENGINE_SERVER_PORT=$PORT ./csml-server
