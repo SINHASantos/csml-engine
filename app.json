@@ -5,6 +5,9 @@
     "success_url": "/",
     "keywords": ["rust", "csml"],
     "website": "https://www.csml.dev/",
+    "addons": [
+        "ormongo"
+    ],
     "env": {
         "ENGINE_DB_TYPE": {
             "value": "mongodb",
