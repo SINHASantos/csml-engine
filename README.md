@@ -9,7 +9,7 @@
 <h4 align="center">First programming language dedicated to building chatbots.</h4>
 
 <p>
-  <a href="https://cloud.digitalocean.com/apps/new?repo=https://github.com/CSML-by-Clevy/csml-engine/tree/feat-deploy-cloud">
+  <a href="https://cloud.digitalocean.com/apps/new?repo=https://github.com/CSML-by-Clevy/csml-engine/feat-deploy-cloud">
   <img src="https://www.deploytodo.com/do-btn-blue.svg" alt="Deploy to DO">
   </a>
   </br>
