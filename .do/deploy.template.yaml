@@ -1,25 +1,23 @@
 spec:
-  name: csml
+  name: clevy-csml-engine
   services:
-  - name: clevy-csml-engine
-    envs:
+  - envs:
     - key: ENGINE_DB_TYPE
-      scope: RUN_AND_BUILD_TIME
       value: mongodb
     - key: MONGODB_DATABASE
-      scope: RUN_AND_BUILD_TIME
       value: csml
     - key: MONGODB_HOST
-      scope: RUN_AND_BUILD_TIME
     - key: MONGODB_PORT
-      scope: RUN_AND_BUILD_TIME
-    - key: ENCRYPTION_SECRET
-      scope: RUN_AND_BUILD_TIME
     - key: ENGINE_SERVER_PORT
-      scope: RUN_AND_BUILD_TIME
       value: "8080"
     image:
       registry: clevy
       registry_type: DOCKER_HUB
       repository: csml-engine
       tag: latest
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    name: clevy-csml-engine
+    routes:
+    - path: /
+    source_dir: /
