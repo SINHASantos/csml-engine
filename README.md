@@ -8,6 +8,14 @@
 
 <h4 align="center">First programming language dedicated to building chatbots.</h4>
 
+<p>
+  <a href="https://cloud.digitalocean.com/apps/new?repo=https://github.com/CSML-by-Clevy/csml-engine">
+  <img src="https://www.deploytodo.com/do-btn-blue.svg" alt="Deploy to DO">
+  </a>
+  </br>
+  </br>
+</p>
+
 <p align="center">
   <img src="https://github.com/CSML-by-Clevy/csml-engine/workflows/Rust/badge.svg" alt="Rust">
   <a href="https://github.com/CSML-by-Clevy/csml-engine/releases/latest"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/csml-by-clevy/csml-engine?label=latest%20release&logo=Latest%20release"></a>

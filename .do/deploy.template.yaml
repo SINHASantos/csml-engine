@@ -1,25 +1,22 @@
 spec:
- name: csml-engine
+ name: csml
  services:
- - name: web
-   git:
-     branch: feat/deploy-to-digital-ocean
-     repo_clone_url: https://github.com/digitalocean/sample-golang.git
+ - name: csml-engine
    envs:
-    - key:
-   run_command: cargo run --manifest-path=csml_server/Cargo.toml --features csml_engine/mongo --release
-
-
-
-# {
-#         "ENGINE_DB_TYPE": {
-#             "value": "mongodb",
-#             "required": true
-#         },
-#         "MONGODB_DATABASE": "csml",
-#         "MONGODB_URI": "",
-
-#         "ENCRYPTION_SECRET": {
-#             "generator": "secret"
-#         }
-#     }
+    - key: ENGINE_DB_TYPE
+      value: "mongodb"
+    - key: MONGODB_DATABASE
+      value: "csml"
+    - key: MONGODB_HOST
+      value:
+    - key: MONGODB_PORT
+      value: "27017"
+    - key: MONGODB_USERNAME
+    - key: MONGODB_PASSWORD
+    - key: MONGODB_URI
+    - key: ENCRYPTION_SECRET
+    - key: ENGINE_SERVER_PORT
+      scope: RUN_TIME
+      value: ${PORT}
+   build_command: curl -L https://github.com/CSML-by-Clevy/csml-engine/releases/download/v1.6.3/csml-server-linux-amd64 > csml_server && chmod 755 csml_server
+   run_command: ./csml_server
