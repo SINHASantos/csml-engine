@@ -1,24 +1,25 @@
-name: csml
-services:
-- name: csml-engine
-  envs:
-  - key: ENGINE_DB_TYPE
-    value: "mongodb"
-  - key: MONGODB_DATABASE
-    value: "csml"
-  - key: MONGODB_HOST
-    value:
-  - key: MONGODB_PORT
-    value: "27017"
-  - key: MONGODB_USERNAME
-  - key: MONGODB_PASSWORD
-  - key: MONGODB_URI
-  - key: ENCRYPTION_SECRET
-  - key: ENGINE_SERVER_PORT
-    scope: RUN_TIME
-    value: ${PORT}
-  git:
-    repo_clone_url: https://github.com/CSML-by-Clevy/csml-engine.git
-    branch: feat-deploy-cloud
-  build_command: curl -L https://github.com/CSML-by-Clevy/csml-engine/releases/download/v1.6.3/csml-server-linux-amd64 > csml_server && chmod 755 csml_server
-  run_command: ./csml_server
+spec:
+  name: csml
+  services:
+  - name: csml-engine
+    envs:
+    - key: ENGINE_DB_TYPE
+      value: "mongodb"
+    - key: MONGODB_DATABASE
+      value: "csml"
+    - key: MONGODB_HOST
+      value:
+    - key: MONGODB_PORT
+      value: "27017"
+    - key: MONGODB_USERNAME
+    - key: MONGODB_PASSWORD
+    - key: MONGODB_URI
+    - key: ENCRYPTION_SECRET
+    - key: ENGINE_SERVER_PORT
+      scope: RUN_TIME
+      value: ${PORT}
+    git:
+      repo_clone_url: https://github.com/CSML-by-Clevy/csml-engine.git
+      branch: feat-deploy-cloud
+    build_command: curl -L https://github.com/CSML-by-Clevy/csml-engine/releases/download/v1.6.3/csml-server-linux-amd64 > csml_server && chmod 755 csml_server
+    run_command: ./csml_server
