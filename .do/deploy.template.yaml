@@ -4,7 +4,7 @@ spec:
  - name: csml-engine
    git:
     branch: feat/deploy-to-digital-ocean
-    repo_clone_url: https://github.com/CSML-by-Clevy/csml-engine
+    repo_clone_url: https://github.com/CSML-by-Clevy/csml-engine.git
    envs:
     - key: ENGINE_DB_TYPE
       value: "mongodb"
