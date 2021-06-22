@@ -18,14 +18,8 @@ spec:
     - key: ENGINE_SERVER_PORT
       scope: RUN_AND_BUILD_TIME
       value: "8080"
-    http_port: 8080
     image:
       registry: clevy
       registry_type: DOCKER_HUB
       repository: csml-engine
       tag: latest
-    instance_count: 1
-    instance_size_slug: basic-xxs
-    routes:
-    - path: /
-    source_dir: /
