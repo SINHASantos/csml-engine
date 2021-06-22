@@ -24,7 +24,7 @@
 
 ## Deploy
 
-<a href="https://heroku.com/deploy?template=https://github.com/CSML-by-Clevy/csml-engine/tree/feat/deploy-to-heroku">
+<a href="https://heroku.com/deploy?template=https://github.com/CSML-by-Clevy/csml-engine">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 
